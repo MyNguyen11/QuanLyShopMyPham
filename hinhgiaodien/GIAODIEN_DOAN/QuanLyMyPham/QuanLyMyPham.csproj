@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E3E1230-3B0C-4962-8EB2-3567EDF28956}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyMyPham</RootNamespace>
+    <AssemblyName>QuanLyMyPham</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\DataProvider_MayChu.cs" />
+    <Compile Include="DAO\HoaDonDAO.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\LoaiSPDAO.cs" />
+    <Compile Include="DAO\NhaKhoDAO.cs" />
+    <Compile Include="DAO\NhanVienDAO.cs" />
+    <Compile Include="DAO\NSXDAO.cs" />
+    <Compile Include="DAO\QuanLyDAO.cs" />
+    <Compile Include="DAO\SanPhamDAO.cs" />
+    <Compile Include="DTO\HoaDonDTO.cs" />
+    <Compile Include="DTO\KhachHangDTO.cs" />
+    <Compile Include="DTO\LoaiSPDTO.cs" />
+    <Compile Include="DTO\NhaKhoDTO.cs" />
+    <Compile Include="DTO\NhanVienDTO.cs" />
+    <Compile Include="DTO\NSXDTO.cs" />
+    <Compile Include="DTO\QuanLyDTO.cs" />
+    <Compile Include="DTO\SanPhamDTO.cs" />
+    <Compile Include="fGiaoDienChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fGiaoDienChinh.Designer.cs">
+      <DependentUpon>fGiaoDienChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHoaDon.Designer.cs">
+      <DependentUpon>fHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fKhachHang.Designer.cs">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fNhaKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNhaKho.Designer.cs">
+      <DependentUpon>fNhaKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQLNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQLNhanVien.Designer.cs">
+      <DependentUpon>fQLNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQLSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQLSanPham.Designer.cs">
+      <DependentUpon>fQLSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fBanSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBanSanPham.Designer.cs">
+      <DependentUpon>fBanSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThongKe.Designer.cs">
+      <DependentUpon>fThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang.cs" />
+    <Compile Include="Process\db_connect.cs" />
+    <Compile Include="Process\db_info.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SanPham.cs" />
+    <EmbeddedResource Include="fGiaoDienChinh.resx">
+      <DependentUpon>fGiaoDienChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHoaDon.resx">
+      <DependentUpon>fHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fKhachHang.resx">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNhaKho.resx">
+      <DependentUpon>fNhaKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQLNhanVien.resx">
+      <DependentUpon>fQLNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQLSanPham.resx">
+      <DependentUpon>fQLSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBanSanPham.resx">
+      <DependentUpon>fBanSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThongKe.resx">
+      <DependentUpon>fThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d88b5fc8672f09432bea9fe416de166f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22e31a144c6550fb5e8dbf26a3b30d0d.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db_comit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configure.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db_remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-login-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TieuChi-BSCKPIs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6c8f9f50cbd60716faabf2fd7e344eca.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-user-slide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BRKM-GxIu-o0dD-SIRn-thong-diep-chao-ngay-moi-hay-truyen-cam-hung.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editdelete.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
